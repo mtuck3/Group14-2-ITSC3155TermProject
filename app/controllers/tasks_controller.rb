@@ -3,6 +3,7 @@ class TasksController < ApplicationController
         @tasks = Tasks.all
     
     end
+
     
     def new 
 
@@ -11,5 +12,9 @@ class TasksController < ApplicationController
     #     @tasks = tasks.All
     
     # end
+
+    def show
+    end
+
    
 end
