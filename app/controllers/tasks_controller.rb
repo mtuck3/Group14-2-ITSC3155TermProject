@@ -8,10 +8,9 @@ class TasksController < ApplicationController
     def new 
 
     end
-    #     def show
-    #     @tasks = tasks.All
-    
-    # end
+    def create
+        render plain: params[:article].inspect
+    end
 
     def show
     end
