@@ -1,3 +1,21 @@
-<h1>Welcome to your tasks!</h1>
+<h1>Welcome to your Tasks!</h1>
 <%= link_to 'New Task', new_task_path %>
-
+<br>
+<br>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Date</th>
+  </tr>
+ 
+  <% @tasks.each do |task| %>
+    <tr>
+      <td><%= task.title %></td>
+      <td><%= task.description %></td>
+      <td><%= task.date %></td>
+      <td><%= link_to 'Show', task_path(task) %></td>
+    </tr>
+  <% end %>
+</table>
