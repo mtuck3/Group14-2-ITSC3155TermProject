@@ -3,7 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body{
     background-color:silver;
+
 }
 h1{
     background-color:blue;
+}
+
+.center-class{
+    margin:0 auto ;
+     display:block ;
+
+     text-align:center ;
+}
+img.center-class{
+    max-width:300px ;
 }

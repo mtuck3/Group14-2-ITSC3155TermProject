@@ -1,4 +1,6 @@
-<h1>Welcome, Task Manager User!</h1>
+<h1 class="center-class">Welcome, Task Manager User!</h1>
+
+<img  class="center-class" src="https://openclipart.org/image/800px/svg_to_png/215492/task.png" alt="task image"></img>
 
 
-<%= link_to 'My Task', controller: 'tasks' %>
+<%= link_to 'My Tasks', {:controller => 'tasks'}, {:class=>'center-class'} %>
