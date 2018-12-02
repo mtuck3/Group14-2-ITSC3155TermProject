@@ -25,19 +25,22 @@ Given("I visit the New Task homepage") do
     visit('/tasks/new')
 end
 
-When("I enter {string} in the {string} field") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
+When("I enter {string} in the Title field") do |task1|
+  page.fill_in('Title', :with => task1)
 end
 
-Then("I click on the {string} button") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+When("I enter {string} in the Description field") do |description|
+  page.fill_in('Description', :with => description)
 end
 
-Then("I should be on the {string} page") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+When("I enter {string} in the Date field") do |date|
+  page.fill_in('Date', :with => date)
 end
 
+Then("I click on the {string} button") do |button|
+  click_on (button)
+end
 
-
-
-
+Then("I should be on the {string} page") do |page_title|
+  expect(page).to have_content(page_title)
+end
