@@ -13,4 +13,31 @@
         <%= @task.date %>
    
 </p>
+<h2>Steps</h2>
+<% @task.steps.each do |step| %>
+<p>
+    <strong>Steps:</strong>
+    <%= step.steps %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= step.body %>
+  </p>
+<% end %>
+<h2>Add completed steps:</h2>
+<%= form_for([@task, @task.steps.build]) do |f| %>
+  <p>
+    <%= f.label :steps %><br>
+    <%= f.text_field :steps %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+</p>
 <%= link_to 'Back', tasks_path %>
