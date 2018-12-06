@@ -4,6 +4,6 @@
 h1{
     background-color:green;
 }
-body :not(h1):not(table){
+body :not(h1):not(table):not(img){
     margin-left:10px !important;
 }
