@@ -1,3 +1,4 @@
+<h1>Task</h1>
 <p>
     <strong>Title:</strong>
         <%= @task.title %>
@@ -14,6 +15,7 @@
    
 </p>
 <h2>Steps</h2>
+<p>A list of all your steps</p>
 <% @task.steps.each do |step| %>
 <p>
     <strong>Steps:</strong>
@@ -25,10 +27,10 @@
     <%= step.body %>
   </p>
 <% end %>
-<h2>Add completed steps:</h2>
+
 <%= form_for([@task, @task.steps.build]) do |f| %>
   <p>
-    <%= f.label :steps %><br>
+    <%= f.label :steps, 'Title' %><br>
     <%= f.text_field :steps %>
   </p>
   <p>
